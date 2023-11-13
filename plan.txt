@@ -1,0 +1,86 @@
+F and N
+
+STEP 1{
+    Things to do:
+        1. Class Board: Display game board, Randomize, Slide Tiles, Win Condition.
+                        Member Functions: 2d array.
+        2. Class Tile: Display an individual tile.
+                        Member Functions: int Display number
+        3. namespace Userinput: Funcitons to take input, invalid input handling.
+        4. Main: Main game logic loop, Exit/ Win condition.
+
+        Helper Classes:
+            1. Class Point: Traversing through the 2d array, using x and y coordinates.
+            2. Class Direction: Taking commands and implementing them.
+}
+
+STEP 2{
+    Goal: Be able to Display tiles on the screen
+
+    Tasks:  A default constructor.
+            A contructor that lets us create a tile with a display value.
+            A getNum and isEmpty Funcitons
+            << overload to display the tile.
+}
+
+STEP 3{
+    Goal: Creating a solverd board and displaying it on the screen
+
+    Tasks: Create a class Board 2d array of Tile objects
+            default contructor
+            << overload to display board.
+}
+
+STEP 4{
+    Goal: Input handling and quit game Funcitons
+
+    Tasks:  A function to get input and ignore extranneous input
+            To show the input if it is valid.
+            Quit option
+            Infinite input loop in logic.
+}
+
+STEP 5{
+    Goal: Implement a helper class that will make it easier for us to handle directional commands.
+
+    Tasks:  Implement the class Direction, which has:
+
+            A public nested enum named Type with enumerators up, down, left, right, and max_directions.
+            A private member that stores the actual direction.
+            A single argument constructor which allows us to initialize a Direction with a Type initializer.
+            An overloaded operator-, which takes a Direction and returns the opposite Direction.
+            An overloaded operator<<, which outputs the Direction name to the console.
+            A static function that returns a Direction with a randomized Type. You can use the Random::get() function from the “Random.h” header to generate a random number.
+            Also, in the UserInput namespace, add the following:
+
+            A function that will convert a directional game command (character) to a Direction object.
+}
+
+STEP 6{
+    Goal: Class to make it easier to index tiles.
+
+    Tasks:  Create a class Point similar to cartesian coordinates with opposite index access.
+            Compare two point objects.
+            Get adjacent point with given direction.
+            == and operator overload.
+}
+
+STEP 7{
+    Goal: Add the ability to slide tiles.
+
+    Tasks:  Locate the emty tile and find adjacent tile using the opposite direction to user input.
+            Swap the value.
+            Redraw the new board.
+            create a memberfunction in class Board to access UserInput.
+            Use the input to swap the tiles in board using Points class.
+            Redraw the board.
+}
+
+STEP 8{
+    Goal: Randomize inital state and add win condition
+
+    Tasks:  implementing randomize member function in board.
+            checking current board to solved board.
+            win condition.
+            Changing game logic for win condition.
+}
